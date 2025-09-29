@@ -5,17 +5,18 @@
 # The remaining elements of nums are not important as well as the size of nums.
 # Return k.
 
-class Solution:
-    def removeElement(nums=[], val=int):
-        num_noV = [x for x in nums if x != val]   
-        k = len(num_noV)
-                               
-        return k
 
-        
-        
+def removeElement(nums=[], val=int):
+    k = 0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    for i in range(k, len(nums)):
+        nums[i] = val
+    return k,nums
 
 
 numeri = [3,2,2,3]
-valore=int(3)
-print(Solution.removeElement(numeri,valore))
+valore=3
+print(removeElement(numeri, valore))
