@@ -6,26 +6,16 @@
 # Return k.
 
 class Solution:
-    def __init__ (self, nums=[], val=int):
-        num_noV=[]
+    def removeElement(nums=[], val=int):
+        num_noV = [x for x in nums if x != val]   
+        k = len(num_noV)
+                               
+        return k
+
         
-        for i in range (len(nums)):
-            if nums[i]!=val:
-                num_noV.append(nums[i])
-                numval=(len(nums))-len(num_noV)
-
-        nums=[]
-        for n in num_noV:
-            nums.append(n)
-
-        for e in range (numval):
-            nums.append(val)
-            
-
-        k=len(num_noV)
-        print(k,num_noV,nums)
+        
 
 
-nums = [3,2,2,3]
-val=3
-Solution(nums,val)
+numeri = [3,2,2,3]
+valore=int(3)
+print(Solution.removeElement(numeri,valore))
