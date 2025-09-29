@@ -15,7 +15,6 @@ def somma_t (lista,target,i=0):
             return [nums[complementare],i]
         
         nums[indice]=i
-    print (nums)
             
 
 print(somma_t(lista,target))
