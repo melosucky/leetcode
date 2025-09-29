@@ -6,19 +6,16 @@ lista=[2,7,11,15]
 target=int(9)
 
 def somma_t (lista,target,i=0):
-    if len(lista)==0:
-        return print("lista vuota")
-    
+    nums={}
+    for i,indice in enumerate(lista):
+        complementare=target-lista[i]
 
-    for i in range (len(lista)):
-
-        e=target-lista[i]
-        if e in lista:
-            ind=(i,lista.index(e))
-            return print(f"gli indici sono {ind}")
-        else:
-            i=+1
-            pass
+        if complementare in nums:
+            print (nums)
+            return [nums[complementare],i]
+        
+        nums[indice]=i
+    print (nums)
             
 
-somma_t(lista,target)
+print(somma_t(lista,target))
