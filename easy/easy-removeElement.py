@@ -19,4 +19,4 @@ def removeElement(nums=[], val=int):
 
 numeri = [3,2,2,3]
 valore=3
-print(removeElement(numeri, valore))
+print(removeElement(numeri, valore)) # type: ignore
