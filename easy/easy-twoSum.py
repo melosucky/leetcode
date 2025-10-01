@@ -11,10 +11,10 @@ def somma_t (lista,target,i=0):
         complementare=target-lista[i]
 
         if complementare in nums:
-            print (nums)
             return [nums[complementare],i]
         
         nums[indice]=i
+    
             
 
 print(somma_t(lista,target))
