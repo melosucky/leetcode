@@ -5,16 +5,13 @@
 
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
-        minimo = max(prices)
+        minimo = float("inf")
         maxprofit=0
-        len
+        
         for e in prices:
             if e<minimo:  #min(minimo,e)
                 minimo=e
             profit=e-minimo
             maxprofit=max(maxprofit,profit)
-        return maxprofit
+        return int(maxprofit)
 
-prices = [7,1,5,3,6,4]
-sl=Solution()
-print(sl.maxProfit(prices))
