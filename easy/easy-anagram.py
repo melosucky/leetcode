@@ -6,17 +6,11 @@ class Solution:
             return False
         
         countS, countT = {}, {}
-        i,e = 0,0
-        for ch in s:
-            countS[ch] = countS.get(ch, 0) + 1
-            print(countS)
-        for ch in t:
-            countT[ch] = countT.get(ch, 0) + 1
-            print(countT)
-        
+        for c in s:
+            countS[c] = countS.get(c, 0) + 1 #.get per contare quante volte c è il carattere
+            
+        for c in t:
+            countT[c] = countT.get(c, 0) + 1
+            
         return countS == countT
 
-s = "aab"
-t = "aba"
-solu=Solution()   
-print(solu.isAnagram(s,t))
